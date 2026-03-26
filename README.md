@@ -26,26 +26,26 @@ $ translate --to de
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│                  ANDROID PHONE (Termux)              │
-│                                                      │
+│                  ANDROID PHONE (Termux)             │
+│                                                     │
 │  ┌──────────┐    ┌──────────┐    ┌──────────┐       │
 │  │ Mic/File │───►│ whisper  │───►│ Ollama   │       │
 │  │ (audio)  │    │ .cpp     │    │ (Gemma)  │       │
 │  └──────────┘    │ [STT]    │    │ [TRANS-  │       │
 │                  │          │    │  LATE]   │       │
 │                  └────┬─────┘    └────┬─────┘       │
-│                       │               │              │
-│                  source text     translated text     │
-│                       │               │              │
+│                       │               │             │
+│                  source text     translated text    │
+│                       │               │             │
 │                       │         ┌─────▼─────┐       │
 │                       │         │ Piper TTS │       │
 │                       │         │ [SPEAK]   │       │
 │                       │         └─────┬─────┘       │
-│                       │               │              │
-│                       ▼               ▼              │
+│                       │               │             │
+│                       ▼               ▼             │
 │                  ┌─────────────────────────┐        │
-│                  │   Terminal / Playback /  │        │
-│                  │   Telegram Bot           │        │
+│                  │   Terminal / Playback /  │       │
+│                  │   Telegram Bot           │       │
 │                  └─────────────────────────┘        │
 └─────────────────────────────────────────────────────┘
 ```
