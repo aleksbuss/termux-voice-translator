@@ -1,0 +1,43 @@
+stt:
+  engine: whisper-cpp
+  whisper_binary: ~/whisper.cpp/build/bin/whisper-cli
+  whisper_model: ~/whisper.cpp/models/ggml-base.bin
+  language: auto
+
+translation:
+  engine: ollama
+  ollama_url: http://localhost:11434
+  model: gemma3:4b
+  timeout: 120
+
+tts:
+  engine: piper
+  piper_voices_dir: ~/voice-translator/models/piper
+  espeak_fallback: true
+  voices:
+    de: de_DE-thorsten-high.onnx
+    en: en_US-lessac-medium.onnx
+    ru: ru_RU-denis-medium.onnx
+    es: es_ES-sharvard-medium.onnx
+    fr: fr_FR-siwis-medium.onnx
+    lv: null
+  speed: 1.0
+
+audio:
+  sample_rate: 16000
+  format: wav
+  record_command: termux-microphone-record
+  play_command: play
+  max_duration: 60
+
+telegram:
+  enabled: false
+  bot_token: ""
+  allowed_users: []
+
+general:
+  default_source: auto
+  default_target: de
+  show_source_text: true
+  show_translated_text: true
+  log_level: INFO
